@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="header">My Web Page</h1>
+    <button class ="btn">before</button>
+    <button class ="btn">before</button>
+    <button class ="btn">before</button>
+    <button class ="btn">before</button>
+    <button class="button" onclick="myString()">Click Me</button>
+    <script src="script.js"></script>
+
+
+    // text content: Allows you to read or change the text content of an element. It returns a string representing the text content of the element and its descendants. You can also set the text content by assigning a new string value to it.
+    // innerHTML: Allows you to read or change the HTML content of an element. It returns a string representing the HTML content of the element and its descendants. You can also set the HTML content by assigning a new string value to it, which can include HTML tags.
+    //innerText: Also allows you to read or change the text content of an element, but it takes into account the CSS styles applied to the element. It returns a string representing the visible text content of the element and its descendants, excluding any hidden elements. You can also set the innerText by assigning a new string value to it.
+
+    // TEXTCONTENT:
+    Let paragraph = document.querySelector("PARAGRAPH");
+    console.log(paragraph);
+
+
+    // VAULES IN AN INPUT
+    Function getInputValue() {
+        Let inputElement = document.getElementById("INPUT").VALUE;
+        Let inputValue = inputElement.value;
+        console.log(inputValue.VALUE);
+
+        DOcument.getElementById("GREETING").tEXtContent = `Hello, ${inputValue}`;
+    }

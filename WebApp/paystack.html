@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store Dashboard</title>
+
+    <link rel="stylesheet" href="/WebApp/paystack.css" />
+
+    <!-- Paystack Checkout Library -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <div>
+                <h1>My Store</h1>
+                <p>Manage your store and payments</p>
+            </div>
+
+            <span class="badge">TEST MODE</span>
+        </header>
+
+        <!-- Dashboard Statistics -->
+        <section class="stats">
+            <div class="card">
+                <p>Total Sales</p>
+                <h2 id="totalSales">₦0.00</h2>
+            </div>
+
+            <div class="card">
+                <p>Total Orders</p>
+                <h2 id="totalOrders">0</h2>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="products-section">
+            <h2>Our Products</h2>
+
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Wireless Headphones</h3>
+                    <p>₦25,000</p>
+
+                    <button onclick="buyProduct('Wireless Headphones', 25000)">
+                        Buy Now
+                    </button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Classic Wristwatch</h3>
+                    <p>₦15,000</p>
+
+                    <button onclick="buyProduct('Classic Wristwatch', 15000)">
+                        Buy Now
+                    </button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Travel Backpack</h3>
+                    <p>₦20,000</p>
+
+                    <button onclick="buyProduct('Travel Backpack', 20000)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transactions -->
+        <section class="transactions-section">
+            <h2>Recent Transactions</h2>
+
+            <p id="message">Your transactions will appear here.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th>Reference</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionList"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="paystack.js"></script>
+</body>
+
+</html>

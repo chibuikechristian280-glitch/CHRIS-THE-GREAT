@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Create Your Profile</h1>
+
+        <!-- Profile Form -->
+        <form id="profileForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="cohort">Cohort</label>
+            <input type="text" id="cohort" placeholder="e.g. Cohort 5" required>
+
+            <label for="bio">Bio</label>
+            <textarea id="bio" placeholder="Tell us about yourself" required></textarea>
+
+            <button type="submit">Submit Profile</button>
+        </form>
+
+        <!-- Profile Card -->
+        <div id="profileCard" class="profile-card hidden">
+            <div class="avatar" id="avatar"></div>
+
+            <h2 id="displayName"></h2>
+
+            <p class="cohort" id="displayCohort"></p>
+
+            <p class="bio" id="displayBio"></p>
+        </div>
+    </div>
+
+    <script>
+        const profileForm = document.getElementById("profileForm");
+
+        const profileCard = document.getElementById("profileCard");
+
+        profileForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get values from the form
+            const name = document.getElementById("name").value.trim();
+            const cohort = document.getElementById("cohort").value.trim();
+            const bio = document.getElementById("bio").value.trim();
+        });
+    </script>
+
+</body>
+
+</html>

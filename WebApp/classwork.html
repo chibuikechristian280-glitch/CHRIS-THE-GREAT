@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="password" placeholder="Enter password">
+
+<button id="passwordBtn" type="button">Show Password</button>
+
+<script>
+let userInput = document.getElementById("password");
+let toggleBtn = document.getElementById("passwordBtn");
+
+toggleBtn.addEventListener("click", function () {
+
+    if (userInput.type == "password") {
+        userInput.type = "text";
+        toggleBtn.textContent = "Hide Password";
+    } else {
+        userInput.type = "password";
+        toggleBtn.textContent = "Show Password";
+    }
+
+});
+</script>
+</body>
+</html>

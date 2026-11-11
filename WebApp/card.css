@@ -1,0 +1,98 @@
+:root {
+    --bg: #f4f5f9;
+    --card: #fff;
+    --text: #1b1d2a;
+    --muted: #5d6278;
+    --border: #e3e5ee;
+    --accent: #4f46e5;
+    --accent-bg: #eceafd;
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #12131a;
+        --card: #1c1e2b;
+        --text: #eceef8;
+        --muted: #a0a5bd;
+        --border: #2d3042;
+        --accent: #a5a0ff;
+        --accent-bg: #2a2850;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family:
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px;
+}
+
+.sub {
+    color: var(--muted);
+    margin: 0 0 24px;
+    font-size: 0.9rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-bg);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+}
+
+.email {
+    color: var(--muted);
+    font-size: 0.88rem;
+    overflow-wrap: anywhere;
+}
